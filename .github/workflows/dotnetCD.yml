@@ -21,13 +21,13 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore TestHeroku.sln
 
       - name: Build
-        run: dotnet build
+        run: dotnet build TestHeroku.sln
 
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test TestHeroku.sln --no-build --verbosity normal
   
   deploy: 
 
